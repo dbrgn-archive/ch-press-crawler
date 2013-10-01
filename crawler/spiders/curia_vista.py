@@ -17,8 +17,9 @@ class CuriaVistaSpider(CrawlSpider):
     ]
 
     rules = (
-        Rule(SgmlLinkExtractor(allow=('resultate\.aspx',))),
-        Rule(SgmlLinkExtractor(allow=('geschaefte\.aspx',)), callback='parse_item'),
+        Rule(SgmlLinkExtractor(allow=(r'resultate.aspx',))),
+        Rule(SgmlLinkExtractor(allow=(r'geschaefte.aspx',), deny=(r'parlament.ch/[eif]/',)),
+            callback='parse_item'),
     )
 
     def parse_item(self, response):

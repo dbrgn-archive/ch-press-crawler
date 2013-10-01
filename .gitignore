@@ -6,3 +6,5 @@
 *.egg-info
 .coverage
 .coveralls.yml
+/data*.json
+/data*.json.?*

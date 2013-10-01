@@ -17,6 +17,6 @@ class DuplicateAffairsPipeline(object):
 class ValidTitlePipeline(object):
 
     def process_item(self, item, spider):
-        if item['title'] in ['']:
-            raise DropItem('Item with invalid title: %s' % item)
+        if item['title'].lower() in ['', 'titel folgt', 'titre suit', 'titolo segue']:
+            raise DropItem('Item with invalid or unfinished title: %s' % item)
         return item

@@ -12,7 +12,7 @@ SPIDER_MODULES = ['crawler.spiders']
 NEWSPIDER_MODULE = 'crawler.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'ch-press-crawler/0.1 (+http://dbrgn.ch)'
+USER_AGENT = 'ch-press-crawler/0.1 (+https://github.com/dbrgn/ch-press-crawler)'
 
 ITEM_PIPELINES = {
     'crawler.pipelines.ValidTitlePipeline': 100,
